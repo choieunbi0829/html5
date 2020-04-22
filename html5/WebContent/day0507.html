@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button>버튼1</button>
+	<button>버튼2</button>
+	<script>
+		function wConsole(){
+			console.log("일반함수");
+		}
+		let btn = document.querySelectorAll("button");
+		btn.addEventListener("click", wConsole);
+			//이벤트를 추가하는 함수 addEventListener()
+			//매개변수로는 첫 번째 동작, 두 번쨰 실행 함수
+			//addEventListener 메소드의 매개변수로 입력되는 함수는 매개변수가 없을 시
+			//소괄호()를 생략한다.
+			btn[1].addEventListener("click", function(){
+				document.write("무명함수");		//함수에서 write()를 호출하면 문서를 지우고 다시 작성한다.
+			});
+	</script>
+</body>
+</html>

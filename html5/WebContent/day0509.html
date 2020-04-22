@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<script>
+		function car(){		//메소드
+			
+		}
+		function Car(company, color, model){		//클래스
+			
+			this.company = company,	//키는 ""로 감싸도 되고 생략해도 됩니다.
+			this.color = color,			//값은 문자열일 경우 반드시 ""로 감싸야만 합니다.
+			this.model = model,			
+			this.maxSpeed = 350,
+			this.speed = 0,
+			/*메소드*/
+			this.addSpeed = function(){
+				this.speed += 10;
+				console.log(this.speed);
+			},
+			this.subSpeed = function(){
+				this.speed -=10;
+				console.log(this.speed);
+			},
+			this.moveSpeed = function(x){
+				this.speed += x;
+				console.log(this.speed);
+			}
+		}
+		
+		let myCar = new Car("기아자동차","black", "k5");
+		console.log(myCar.company);
+		
+	</script>
+</body>
+</html>
