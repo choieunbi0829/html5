@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<button>버튼1</button>
+	<button>바인드</button>
+	<button>언바인드</button>
+	<button>트리거</button>
+	<div></div>
+	<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.5.0.min.js"></script>
+	<script>
+		$(function(){
+			$("div").css({"width":"300px", "height":"300px", "background":"red"});
+			
+			$("button").eq(1).bind("click", function(){				//bind는 on을 뜻함
+				$("button").first().bind("click", function(){			//bind 대신에 on을 사용해도 된다.
+					$("div").toggle();
+				});
+			});
+			$("button:eq(2)").click(function(){
+				$("button").first().unbind("click");					//unbind는 off를 뜻함, 대신 off를 사용할 수 있다.
+			});
+			$("button:last").click(function(){
+				$("button").eq(0).trigger("click");				
+			});
+		});
+	</script>
+</body>
+</html>
