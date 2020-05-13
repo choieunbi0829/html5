@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+@font-face { font-family: 'S-CoreDream-8Heavy'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff'); font-weight: normal; font-style: normal; }
+@font-face { font-family: 'locus_sangsang'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/locus_sangsang.woff') format('woff'); font-weight: normal; font-style: normal; }
+
+h1, h2, h3, h4, .navbar-brand{
+	font-fanily: S-CoreDream-8Heavy, locus_sangsang;
+	color: #333333;
+}
+
+body{
+	font-family: S-CoreDream-8Heavy, ocus_sangsang;
+	background-color: #64ffda;
+}
+
+.navbar{
+	border-bottom: #1B5E20 3px solid;
+}
